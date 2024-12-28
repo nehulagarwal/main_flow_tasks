@@ -12,7 +12,7 @@ body {
 
 /* Header */
 header {
-    background-color: #4A4E69;
+    background-color: #1d213d;
     color: #fff;
     padding: 15px 20px;
     display: flex;
@@ -114,12 +114,21 @@ header {
 
 /* Menu Section */
 #menu {
-    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfHx8fHx8fHx8fHwxNjc3MzMwMjk1&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+    height: 100vh; /* Full height of the viewport */
+    padding: 0;
+    background: url('https://images.unsplash.com/photo-1546069901-eacef0df6022?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDh8fGRpbmVyfGVufDB8fHx8MTY5MzA3MTAxNw&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
     color: #fff;
 }
-
+#menu h1.menu-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #444339; /* Changed title color to golden for better visibility */
+}
 #menu h1 {
     font-size: 36px;
     margin-bottom: 40px;
@@ -131,10 +140,14 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .menu-item {
-    background: rgba(255, 255, 255, 0.9);
+    background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
@@ -167,10 +180,15 @@ header {
 
 /* Footer Section */
 footer {
-    background-color: #4A4E69;
+    background-color: #1d213d;
     color: #fff;
-    padding: 20px;
+    padding: 40px;
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center the content horizontally */
 }
 
 .footer-container {
@@ -204,9 +222,11 @@ footer {
     margin-right: 10px;
 }
 
+
 footer p {
-    margin: 5px 0;
-    font-size: 14px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fbfbfb;
 }
 
 footer p b {
