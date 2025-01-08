@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavors Junction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <a href="#" class="logo">Flavors Junction</a>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#menu" class="nav-link">Our Menu</a></li>
+                <li><a href="#order" class="nav-link">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <div id="home">
+        <div class="main-home">
+            <div class="inner-home">
+                <div class="inner-content">
+                    <h1>Welcome to Flavors Junction</h1>
+                    <p>Flavors Junction brings you mouth-watering dishes made with the finest ingredients. Discover the perfect blend of taste, tradition, and innovation in every bite.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="back">
+            <div class="main-about">
+                <div class="inner-content">
+                    <h1>About Us</h1>
+                    <p>At Flavors Junction, we celebrate the art of cooking and offer a wide variety of gourmet meals, street food delights, and healthy options. Whether you're craving comfort food or exploring new flavors, we have something for every palate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <div class="back">
+            <h1 class="menu-title">Our Menu</h1>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="https://assets.bonappetit.com/photos/5aa9665c275dc52331d9184b/1:1/w_2240,c_limit/pantry-pasta.jpg" alt="Pasta" class="menu-image">
+                    <h3>Pasta</h3>
+                    <p>₹299</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cheeseburger.jpg" alt="Burger" class="menu-image">
+                    <h3>Burger</h3>
+                    <p>₹249</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Supreme_pizza.jpg/1280px-Supreme_pizza.jpg" alt="Pizza" class="menu-image">
+                    <h3>Pizza</h3>
+                    <p>₹399</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order">
+        <div class="back">
+            <h1>Place Your Order</h1>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="order">Select Your Order:</label>
+                    <select id="order" name="order" required>
+                        <option value="">-- Select --</option>
+                        <option value="Pasta">Pasta (₹299)</option>
+                        <option value="Burger">Burger (₹249)</option>
+                        <option value="Pizza">Pizza (₹399)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address:</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p><b>Contact Us:</b></p>
+        <p>Email: info@flavorsjunction.com</p>
+        <p>Phone: +91-987-654-3210</p>
+        <p>Address: 456 Foodie Lane, Gourmet City, India</p>
+    </footer>
+
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form from reloading the page
+
+            // Show confirmation message
+            const formContainer = document.querySelector("#order .back");
+            formContainer.innerHTML = `
+                <h1>Thank you!</h1>
+                <p>Your order has been placed successfully.</p>
+                <p>Do you want to order anything else?</p>
+                <button onclick="location.reload()">Order Again</button>
+            `;
+        });
+    </script>
+</body>
+</html>
